@@ -7,7 +7,7 @@ ZIPFILE=Output.zip
 JDOC=javadoc
 DOCDIR=doc/
 
-SOURCES=Book.java
+SOURCES=Book.java Bookshelf.java Magazine.java Publishing.java App.java
 OBJECTS=$(SOURCES:.java=.class)
 
 .PHONY: dist doc
@@ -20,7 +20,7 @@ java: $(SOURCES)
 dist:
 	mkdir -p $(DISTDIR)
 	rm -rf $(DISTDIR)*
-	zip $(DISTDIR)$(ZIPFILE) $(SOURCES) $(OBJECTS) Makefile
+	zip $(DISTDIR)$(ZIPFILE) $(SOURCES) Makefile
 
 
 
