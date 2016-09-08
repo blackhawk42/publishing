@@ -2,7 +2,7 @@
  * Magazine class
  * This class implements a magazine.
  *
- *@author Daniel Ch·vez and Erick H Cerecedo
+ *@author Daniel Chávez and Erick H Cerecedo
  *@version 1.0
  **/
 
@@ -30,7 +30,7 @@ public class Magazine{
      *
      *@param title Title of the magazine
      *@param volume Number of publicacion
-     *@param year numero de publicacion.
+     *@param year Number of publication
      **/
     
     public Magazine(String title,  String volume, int year){
