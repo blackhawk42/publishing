@@ -2,97 +2,53 @@
  * Book class
  * This class implements a book.
  * 
- * @author Daniel Chávez y and Erick Cerecedo
+ * @author Daniel Chávez y and Erick H Cerecedo
  * @version 1.0
  */
-public class Book
+public class Book extends Publishing
 {
-	private String title; // Title
-	private String author; // Author
-	private int pageNo; // Number of Pages
+	private int chapterNo; // Number of chapters
 	
 	/**
 	 * Blank constructor
 	 */
 	public Book()
 	{
-		this.title = "";
-		this.author = "";
-		this.pageNo = 0;
+		super();
+		this.chapterNo = 0;
 	}
 	
 	/**
 	 * Non-blank constructor
 	 * 
 	 * @param	title	Title of the book
-	 * @param	author	Author of the book
-	 * @param	pageNo	Number of pages in the book
+	 * @param	authors	Array of authors of the book
+	 * @param	chapterNo	Number of pages in the book
 	 */
-	public Book(String title, String author, int pageNo)
+	public Book(String title, String[] authors, int chapterNo)
 	{
-		this.title = title;
-		this.author = author;
-		this.pageNo = pageNo;
+		super(title, authors);
+		this.chapterNo = chapterNo;
 	}
 	
 	/**
-	 * Accessor for the title attribute
+	 * Accessor for the number of chapters attribute
 	 * 
-	 * @return	Current title of the book
+	 * @return	Current number of chapters in the book
 	 */
-	public String getTitle()
+	public int getChapterNo()
 	{
-		return this.title;
+		return this.chapterNo;
 	}
 	
 	/**
-	 * Accessor for the author attribute
+	 * Mutator for the number of chapter attribute
 	 * 
-	 * @return	Current author of the book
+	 * @param	author	New int for the number of chapters
 	 */
-	public String getAuthor()
+	public void setChapterNo(int chapterNo)
 	{
-		return this.author;
-	}
-	
-	/**
-	 * Accessor for the number of pages attribute
-	 * 
-	 * @return	Current number of pages in the book
-	 */
-	public int getPageNo()
-	{
-		return this.pageNo;
-	}
-	
-	/**
-	 * Mutator for the title attribute
-	 * 
-	 * @param	title	New string for the title
-	 */
-	public void setTitle(String title)
-	{
-		this.title = title;
-	}
-	
-	/**
-	 * Mutator for the author attribute
-	 * 
-	 * @param	author	New string for the author
-	 */
-	public void setAuthor(String author)
-	{
-		this.author = author;
-	}
-	
-	/**
-	 * Mutator for the number of pages attribute
-	 * 
-	 * @param	author	New int for the number of pages
-	 */
-	public void setPageNo(int pageNo)
-	{
-		this.pageNo = pageNo;
+		this.chapterNo = chapterNo;
 	}
 	
 	/**
@@ -102,6 +58,6 @@ public class Book
 	 */
 	public String toString()
 	{
-		return this.title + ", by " + this.author + " (" + this.pageNo + " pages)";
+		return "\"" + this.getTitle() + "\"" + ", by " + arrayToString(getAuthors()) + " (" + this.chapterNo + " chapters)";
 	}
 }

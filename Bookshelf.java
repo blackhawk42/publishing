@@ -1,3 +1,10 @@
+/**
+ * Bookshelf class
+ * This class implements a bookshelf.
+ * 
+ * @author Daniel Chávez y and Erick H Cerecedo
+ * @version 1.0
+ */
 public class Bookshelf
 {
         

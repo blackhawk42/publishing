@@ -6,21 +6,17 @@
  *@version 1.0
  **/
 
-public class Magazine{
-    
-    
-    private String title;// Title
-    private String volume;// Author
-    private int year;// Year of publicacion
+public class Magazine extends Publishing
+{
+    private int volume;// Volume of publicacion
     
     /**
      * Blank constructor
      */
     
     public Magazine(){
-        this.title = "";
-        this.volume="";
-        this.year=0;
+        super();
+        this.volume=0;
         
     }
     
@@ -28,26 +24,13 @@ public class Magazine{
     /**
      * Non-blank constructor
      *
-     *@param title Title of the magazine
-     *@param volume Number of publicacion
-     *@param year Number of publication
+     *@param	title		Title of the magazine
+     *@param	authors		Array of strings with the authors
+     *@param	volume		Volume of publication
      **/
-    
-    public Magazine(String title,  String volume, int year){
-        this.title=title;
+    public Magazine(String title,  String[] authors, int volume){
+        super(title, authors);
         this.volume=volume;
-        this.year=year;
-        
-    }
-    
-    /**
-     *Accessor for the title attribute
-     *
-     *@return Current title of the magazine
-     */
-    
-    public String getTitle(){
-        return this.title;
         
     }
     
@@ -56,56 +39,20 @@ public class Magazine{
      *
      *@return Current volume of the magazine
      */
-    
-    public String getVolume(){
+    public int getVolume(){
         return this.volume;
-        
-    }
-    
-    /**
-     *Accessor for the year attribute
-     *
-     *@return Current year of the magazine
-     */
-    
-    public int getYear(){
-        return this.year;
-        
-    }
-    
-    /**
-     * Mutator for the title attribute
-     *
-     * @param	title	New string for the title
-     */
-    
-    public void setTitle(String title)
-    {
-        this.title = title;
         
     }
     
     /**
      * Mutator for the volume attribute
      *
-     * @param volume	New string for the volume
+     * @param 	volume	New int for the volume
      */
-    
-    public void setVolume(String volume)
+    public void setVolume(int volume)
     {
         this.volume = volume;
         
-    }
-    
-    /**
-     *Mutator for the year of publicacion attribute
-     *
-     *@param year NEw int for the year of publiction
-     **/
-    
-    public void setYear(int year)
-    {
-        this.year = year;
     }
     
     
@@ -116,7 +63,7 @@ public class Magazine{
      */
     public String toString()
     {
-        return this.title + ", number " + this.volume + " (" + this.year + " year)";
+        return "\"" + this.getTitle() + "\", number " + this.volume + ". Featured authors: " + arrayToString(this.getAuthors());
     }
     
     
