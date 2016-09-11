@@ -25,7 +25,7 @@ public class Magazine extends Publishing
      * Non-blank constructor
      *
      *@param	title		Title of the magazine
-     *@param	authors		Array of strings with the authors
+     *@param	authors		Array of strings with the featured authors. It can be all or just some important ones.
      *@param	volume		Volume of publication
      **/
     public Magazine(String title,  String[] authors, int volume){
