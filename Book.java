@@ -44,7 +44,7 @@ public class Book extends Publishing
 	/**
 	 * Mutator for the number of chapter attribute
 	 * 
-	 * @param	author	New int for the number of chapters
+	 * @param	chapterNo	New int for the number of chapters
 	 */
 	public void setChapterNo(int chapterNo)
 	{
