@@ -7,7 +7,7 @@ ZIPFILE=Publishing.zip
 JDOC=javadoc
 DOCDIR=API/
 
-SOURCES=Publishing.java Book.java Magazine.java
+SOURCES=Publishing.java Book.java Magazine.java APK.java
 OBJECTS=$(SOURCES:.java=.class)
 
 .PHONY: dist doc
